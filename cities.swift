@@ -6,7 +6,6 @@
 //  Copyright © 2019 dwei14. All rights reserved.
 //
 
-
 // This part is to set two default city information in the favorite list.
 // Each city would have city name, descriotion and the image_Name
 
@@ -17,7 +16,6 @@ class cities
     var cities:[city] = []
     init()
     {
-        // Load the image for each city
         var imagesource1 : Data? = UIImage(named: "Tempe.jpg")?.pngData()
         var imagesource2 : Data? = UIImage(named: "Flagstaff.jpg")?.pngData()
         //var imagesource3 : Data? = UIImage(named: "blank.jpg")?.pngData()
@@ -37,6 +35,8 @@ class cities
         //cities.append(c5)
         
     }
+    
+    // Remove the city
     func removeCityObject(_ item:Int)
     {
         cities.remove(at: item)

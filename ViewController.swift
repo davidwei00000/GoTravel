@@ -6,10 +6,12 @@
 //  Copyright © 2019 dwei14. All rights reserved.
 //
 
+
+// This part is to modify the view controller of the first page
+
 import UIKit
 import CoreData
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     
     // Set the favorite list
     var myCityList: cities = cities ()
@@ -19,7 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var cityTable: UITableView!
     
-   // Load the list
+    // Load the list
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -31,7 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let x = fetchResults.count
             
-            // Load the detail information, including name, description and image for each city.
+            
             print(x)
             if x != 0 {
                 
@@ -43,7 +45,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                    
                     let indexPath = IndexPath (row: self.myCityList.cities.count - 1, section: 0)
                     //let picture = UIImage(data: l.image  as! Data)
-                    
                     
                     // prepare the image array for next functionctionality
                     
@@ -78,7 +79,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         return cell
     }
-    
     // delete table entry
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
@@ -86,8 +86,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell.EditingStyle { return UITableViewCell.EditingStyle.delete }
-    
-    
     
     // Updates the list
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -142,7 +140,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.present(alert, animated: true)
     }
     
-    //  Pass the several information for city to the next page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == "detailView"){

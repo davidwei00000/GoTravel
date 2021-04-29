@@ -5,7 +5,7 @@
 //  Created by dwei14 on 10/31/19.
 //  Copyright © 2019 dwei14. All rights reserved.
 //
-//   Core Data
+//
 
 import Foundation
 import CoreData

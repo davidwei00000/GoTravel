@@ -6,7 +6,6 @@
 //  Copyright © 2019 dwei14. All rights reserved.
 //
 
-
 // This part is to set and retrieve the map information for the App
 
 import UIKit
@@ -98,7 +97,7 @@ class MapViewController: UIViewController{
                     
                     self.map.addAnnotation(ani)
                     
-                    // Set he latitude and longitude information
+                    // Set the latitude and longitude information
                     self.lati.text = String(format:"%.2f",ani.coordinate.latitude)
                     self.long.text = String(format:"%.2f",ani.coordinate.longitude)
                     self.longValue = ani.coordinate.longitude

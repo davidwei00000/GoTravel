@@ -7,7 +7,8 @@
 //
 
 
-// This part is automatically generated while certain parts of it are modified for Core Data.
+// This part is automatically generated.
+
 
 import UIKit
 import CoreData

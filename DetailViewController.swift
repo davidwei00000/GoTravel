@@ -62,7 +62,8 @@ UINavigationControllerDelegate  {
         // let url = NSURL(string: urlComponents.url )!
         UIApplication.shared.openURL(urlComponents.url!)
         
-        // Retrieve the geo information */
+         
+         // Retrieve the geo information */
         let geoCoder = CLGeocoder();
         //let addressString = "699, S. Mill Ave, Tempe, AZ, 85281"
         let addressString = selectedCity
@@ -99,8 +100,7 @@ UINavigationControllerDelegate  {
         // Do any additional setup after loading the view.
     }
     
-    
-    // Add image to the city and save them
+    // Add image to the city
     @IBAction func addImage(_ sender: Any) {
         
         if imageSource.selectedSegmentIndex == 0
@@ -126,7 +126,7 @@ UINavigationControllerDelegate  {
         }
     }
     
-    // Choose image from the photo library and save them
+    // Choose image from the photo library
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
         // Local variable inserted by Swift 4.2 migrator.
@@ -160,7 +160,7 @@ UINavigationControllerDelegate  {
     }
     
     
-    // Choose either from standard map type or satellite map type
+    // Choose either standard map type or satellite map type
     @IBAction func changeMapType(_ sender: Any) {
         
         switch(mapType.selectedSegmentIndex)
@@ -195,11 +195,13 @@ UINavigationControllerDelegate  {
         
         self.map.addAnnotation(annotation)
     }
-    
-    
-}
 
-    /*
+}
+    
+            
+       
+    
+   /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
